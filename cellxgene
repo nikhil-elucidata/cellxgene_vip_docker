@@ -1,0 +1,9 @@
+server {
+    listen 5005;
+    
+    location / {
+        rewrite ^/$ /$COMPUTE_DOCKER_PATH redirect;
+        alias /$COMPUTE_DOCKER_PATH; 
+    }
+
+}
